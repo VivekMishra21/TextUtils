@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 export default function TextForm(props) {
   const [text, setText] = useState("Enter text here");
-  const { t } = useTranslation();
 
   const handleUpperClick = () => {
     let newText = text.toUpperCase();
