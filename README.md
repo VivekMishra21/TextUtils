@@ -26,7 +26,7 @@ TextUtils is a simple React-based text utility tool that allows users to manipul
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/VivekMishra21/textutils.git
+git clone https://github.com/VivekMishra21/TextUtils.git
 ```
 
 2. Navigate to the project folder:
