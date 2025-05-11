@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import TextForm from "./components/TextForm";
+import { useTranslation } from 'react-i18next';
+
+
+
+
 
 function App() {
+  const { i18n } = useTranslation();
+
+  const handleLangChange = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <select onChange={handleLangChange} className="form-select w-25 m-2">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+      </select>
+      </div>
+      <Navbar tittle="TextUtils" />
+        <div className="container my=3">
+        <TextForm heading="Enter the text to analyze Below" />
+        </div>
+
+
+
+
+     
+      
+    </>
   );
 }
 
